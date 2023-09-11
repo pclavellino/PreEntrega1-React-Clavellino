@@ -9,28 +9,29 @@ const NavBar = () => {
             <div className="container-fluid">
                 <Brand />
                 <MenuButton />
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item destacados">
-                                <CategoryItem name="PRODUCTOS DESTACADOS"/>
-                            </li>
-                            <li className="nav-item">
-                                <CategoryItem name="PC"/>
-                            </li>
-                            <li className="nav-item">
-                                <CategoryItem name="NOTEBOOKS"/>
-                            </li>
-                            <li className="nav-item">
-                                <CategoryItem name="IMPRESORAS"/>
-                            </li>
-                            <li className="nav-item">
-                                <CategoryItem name="MONITORES"/>
-                            </li>
-                        </ul>         
-                    </div>
                 <CartWidget />
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item destacados">
+                            <CategoryItem name="PRODUCTOS DESTACADOS"/>
+                        </li>
+                        <li className="nav-item">
+                            <CategoryItem name="PC"/>
+                        </li>
+                        <li className="nav-item">
+                            <CategoryItem name="NOTEBOOKS"/>
+                        </li>
+                        <li className="nav-item">
+                            <CategoryItem name="IMPRESORAS"/>
+                        </li>
+                        <li className="nav-item">
+                            <CategoryItem name="MONITORES"/>
+                        </li>
+                    </ul>       
+                </div>
             </div>
         </nav>
+
     )
 }
 
