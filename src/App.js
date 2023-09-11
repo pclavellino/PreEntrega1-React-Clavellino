@@ -9,7 +9,7 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <ItemListContainer />
+        <ItemListContainer greetings={"Bienvenido a la nuestra Tienda Online"} />
       </main>
     </div>
   );
