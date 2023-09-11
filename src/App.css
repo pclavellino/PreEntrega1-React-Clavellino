@@ -1,49 +1,53 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+body  {
+  font-family: "Source Sans Pro";
 }
 
 .logoPrincipal   {
-  width: 300px;
+  width: 275px;
   height: auto;
 }
 
 .navbar   {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
   background-color: #FF8100 ;
+  border-bottom: 5px solid #541388;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item   {
-  margin: 0.7rem;
+  display: flex;
+  align-items: center;
+  margin: 1.2rem;
 }
 
 .nav-link  {
   font-size: 1.2rem;
   font-weight: bold;
+  border-bottom: 3px solid #FF8100;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #541388;
+}
+
+.destacados   {
+  background-color: #541388;
+  border-radius: 5px;
+  padding: 0.4rem;
+  width: 9rem;
+}
+
+.destacados a {
+  color: #FFFFFF;
+  border-bottom: 3px solid #541388;
+}
+
+.destacados a:hover   {
+  color: #FFFFFF;
+  box-shadow: 3px 3px 25px #541388;
 }
 
 .cartContainer {
@@ -75,13 +79,4 @@
   margin: auto;
   width: 50px;
   height: 50px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

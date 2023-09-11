@@ -11,25 +11,25 @@ const NavBar = () => {
                 <MenuButton />
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item">
+                            <li className="nav-item destacados">
                                 <CategoryItem name="PRODUCTOS DESTACADOS"/>
                             </li>
                             <li className="nav-item">
                                 <CategoryItem name="PC"/>
                             </li>
                             <li className="nav-item">
-                                <CategoryItem name="Notebooks"/>
+                                <CategoryItem name="NOTEBOOKS"/>
                             </li>
                             <li className="nav-item">
-                                <CategoryItem name="Impresoras"/>
+                                <CategoryItem name="IMPRESORAS"/>
                             </li>
                             <li className="nav-item">
-                                <CategoryItem name="Monitores"/>
+                                <CategoryItem name="MONITORES"/>
                             </li>
                         </ul>         
                     </div>
+                <CartWidget />
             </div>
-            <CartWidget />
         </nav>
     )
 }
