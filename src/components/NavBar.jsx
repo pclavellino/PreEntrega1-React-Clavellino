@@ -1,6 +1,6 @@
 import Brand from "./Brand"
 import MenuButton from "./MenuButton"
-import CategoryItem from "./CatergoryItem"
+import CategoryItem from "./CategoryItem"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -8,8 +8,8 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <Brand />
-                <MenuButton />
                 <CartWidget />
+                <MenuButton />
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item destacados">
