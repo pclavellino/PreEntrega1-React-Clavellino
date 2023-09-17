@@ -1,0 +1,33 @@
+.counter    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.control    {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    font-size: 1.2rem;
+}
+
+.quantity   {
+    margin: 0;
+}
+
+.button     {
+    background-color: #FF8100;
+    border-radius: 10px;
+}
+
+.buttonControl  {
+    width: 3ch;
+}
+
+.buttonAddToCart   {
+    padding: 0.25rem 1rem 0.25rem 1rem;
+}

@@ -1,7 +1,8 @@
-import Brand from "./Brand"
+import Brand from "../Brand/Brand"
 import MenuButton from "./MenuButton"
 import CategoryItem from "./CategoryItem"
-import CartWidget from "./CartWidget"
+import CartWidget from "../Cart/CartWidget"
+import "./NavBar.css"
 
 const NavBar = () => {
     return (

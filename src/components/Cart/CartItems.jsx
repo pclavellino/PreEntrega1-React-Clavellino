@@ -1,3 +1,4 @@
+import "./Cart.css";
 
 const CartItems = ({count = 0}) => {
     return (

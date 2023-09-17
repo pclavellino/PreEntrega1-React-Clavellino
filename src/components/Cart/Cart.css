@@ -1,0 +1,30 @@
+.cartContainer {
+    position: relative;
+    margin-right: 2.5rem;
+    min-width: 4rem;
+    height: 4rem;
+  }
+  
+  .cartItems  {
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    top: 1px;
+    right: 1px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cartIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 45px;
+    height: 45px;
+  }
