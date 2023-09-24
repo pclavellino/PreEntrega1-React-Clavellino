@@ -1,4 +1,3 @@
-import ItemCount from "../ItemCount/ItemCount";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainter = () => {
