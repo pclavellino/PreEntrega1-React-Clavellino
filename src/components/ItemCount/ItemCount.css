@@ -6,7 +6,7 @@
 }
 
 .control    {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,16 +16,18 @@
 }
 
 .quantity   {
+    font-weight: bold;
     margin: 0;
 }
 
 .button     {
     background-color: #FF8100;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .buttonControl  {
-    width: 3ch;
+    width: 4ch;
 }
 
 .buttonAddToCart   {

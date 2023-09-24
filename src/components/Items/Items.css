@@ -1,0 +1,27 @@
+.ItemList   {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.Card   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.CardImage  {
+    height: auto;
+}
+
+.CardContent    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 1rem 1rem 1rem;
+    padding: 0;
+}
