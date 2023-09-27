@@ -1,21 +1,10 @@
-import Item from "./Item";
-import { useState, useEffect } from "react";
-import "./Items.css";
+import Item from "../Items/Item";
+import { useGetProducts } from "../../hooks/useGetProducts";
+import "./ItemList.css";
 
 const ItemList = () => {
 
-    const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-            setTimeout(()=> {
-                fetch("products.json")
-                .then((response) => response.json())
-                .then((data) => setProducts(data))
-                .finally(() => setIsLoading(false));
-            }, 2000)       
-    },[])
-
+    const {products, isLoading} = useGetProducts();
 
     if (isLoading) {
         return (
@@ -37,6 +26,5 @@ const ItemList = () => {
         </div>
     )
 }
-
 
 export default ItemList;

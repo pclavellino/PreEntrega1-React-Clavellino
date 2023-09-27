@@ -2,7 +2,7 @@ import {useState} from "react";
 import "./ItemCount.css";
 
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial = 1, onAdd}) => {
     let [count, setCount] = useState(initial)
     
     const increment = () => {

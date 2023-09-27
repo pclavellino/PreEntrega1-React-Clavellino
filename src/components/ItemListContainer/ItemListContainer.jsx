@@ -1,4 +1,4 @@
-import ItemList from "./Items/ItemList"
+import ItemList from "../ItemList/ItemList"
 
 
 const ItemListContainer = () => {
