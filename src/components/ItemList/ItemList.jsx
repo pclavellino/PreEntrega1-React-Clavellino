@@ -2,9 +2,9 @@ import Item from "../Items/Item";
 import { useGetProducts } from "../../hooks/useGetProducts";
 import "./ItemList.css";
 
-const ItemList = () => {
+const ItemList = ({productCategory}) => {
 
-    const {products, isLoading} = useGetProducts();
+    const {products, isLoading} = useGetProducts(productCategory);
 
     if (isLoading) {
         return (

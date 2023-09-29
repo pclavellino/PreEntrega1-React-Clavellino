@@ -1,7 +1,7 @@
 import { useGetProductById } from "../../hooks/useGetProductById";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainter = () => {
+const ItemDetailContainer = () => {
 
     const { product, isLoading } = useGetProductById(1);
 
@@ -25,4 +25,4 @@ const ItemDetailContainter = () => {
 
 }
 
-export default ItemDetailContainter;
+export default ItemDetailContainer;

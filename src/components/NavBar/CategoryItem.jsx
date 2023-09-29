@@ -1,8 +1,8 @@
+import { NavLink } from "react-router-dom";
 
-
-const CategoryItem = ({name}) => {
+const CategoryItem = ({name, category}) => {
     return (
-        <a className="nav-link" aria-current="page" href="#">{name}</a>
+        <NavLink className="nav-link" to={`/category/${category}`}>{name}</NavLink>
     )
 }
 
