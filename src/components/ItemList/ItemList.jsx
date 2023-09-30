@@ -1,14 +1,17 @@
 import Item from "../Items/Item";
 import { useGetProducts } from "../../hooks/useGetProducts";
 import "./ItemList.css";
+import Loading from "../Loading/Loading";
 
 const ItemList = ({productCategory}) => {
 
     const {products, isLoading} = useGetProducts(productCategory);
 
+    console.log(products)
+
     if (isLoading) {
         return (
-            <h1>Cargando...</h1>
+            <Loading/>
         )
     }
 
@@ -21,7 +24,7 @@ const ItemList = ({productCategory}) => {
     return (
         <div className="ItemList">
             {products.map((product => (
-                <Item key={product.id} nombre={product.nombre} imagen= {product.imagen} precio={product.precio} descripcion={product.descripcion} />
+                <Item key={product.id} id={product.id} nombre={product.nombre} imagen={product.imagen} precio={product.precio} descripcion={product.descripcion} />
             )))}
         </div>
     )

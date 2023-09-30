@@ -17,6 +17,20 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 1rem 0 1rem;
     padding: 0;
+}
+
+.botonDetalle   {
+    background-color: #FF8100;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px;
+    margin: 5px;
+    min-width: 100px;
+    font-weight: bold;
+}
+
+.botonDetalle:hover     {
+    box-shadow: 5px 5px 25px #FF8100;
 }

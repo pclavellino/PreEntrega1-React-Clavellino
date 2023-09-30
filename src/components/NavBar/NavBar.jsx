@@ -2,7 +2,6 @@ import Brand from "../Brand/Brand"
 import MenuButton from "./MenuButton"
 import CategoryItem from "./CategoryItem"
 import CartWidget from "../Cart/CartWidget"
-import { Link, NavLink } from "react-router-dom"
 import "./NavBar.css"
 
 const NavBar = () => {

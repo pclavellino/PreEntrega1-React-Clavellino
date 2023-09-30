@@ -16,12 +16,6 @@ export const useGetProducts = (productCategory) => {
         .finally(() => setIsLoading(false))
     }, [productCategory])
 
-    /*useEffect(() => {
-        getProducts()
-        .then((response)=> setProducts(response))
-        .finally(() => setIsLoading(false))
-    }, [])*/
-
     return {
         products,
         isLoading

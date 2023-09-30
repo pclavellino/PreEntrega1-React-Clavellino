@@ -13,7 +13,7 @@ export const useGetProductById = (productId) => {
         .finally(() => {
             setIsLoading(false)
         })
-    })
+    }, [productId])
 
     return {
         product,

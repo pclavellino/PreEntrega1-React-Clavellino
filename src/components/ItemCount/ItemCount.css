@@ -6,7 +6,6 @@
 }
 
 .control    {
-    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,16 +19,23 @@
     margin: 0;
 }
 
-.button     {
+.boton    {
     background-color: #FF8100;
     border: none;
     border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    padding: 5px;
 }
 
-.buttonControl  {
+.boton:hover    {
+    box-shadow: 5px 5px 25px #FF8100;
+}
+
+.botonControl  {
     width: 4ch;
 }
 
-.buttonAddToCart   {
-    padding: 0.25rem 1rem 0.25rem 1rem;
+.botonAgregarCarrito    {
+    min-width: 150px;
 }
