@@ -7,8 +7,6 @@ const ItemList = ({productCategory}) => {
 
     const {products, isLoading} = useGetProducts(productCategory);
 
-    console.log(products)
-
     if (isLoading) {
         return (
             <Loading/>

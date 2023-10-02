@@ -35,7 +35,7 @@ const ItemDetail = ({itemId}) => {
                 <Typography gutterBottom variant="h5" component="div">$ {product.precio}</Typography>
             </CardContent>
             <CardActions>
-                <ItemCount stock={product.stock} initial={1}/>
+                <ItemCount stock={product.stock} initial={1} onAdd={(items) => console.log("Agregaste " + items + " productos")}/>
             </CardActions>
             <p>Stock Disponible: {product.stock}</p>
             </Card>
