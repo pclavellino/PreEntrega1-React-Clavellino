@@ -5,11 +5,12 @@ import CartWidget from "../Cart/CartWidget"
 import "./NavBar.css"
 
 const NavBar = () => {
+
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <Brand />
-                <CartWidget />
+                <CartWidget/>
                 <MenuButton />
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
@@ -29,7 +30,6 @@ const NavBar = () => {
                 </div>
             </div>
         </nav>
-
     )
 }
 

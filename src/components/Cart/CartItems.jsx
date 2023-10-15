@@ -10,5 +10,4 @@ const CartItems = ({count = 0}) => {
     )
 }
 
-
 export default CartItems;

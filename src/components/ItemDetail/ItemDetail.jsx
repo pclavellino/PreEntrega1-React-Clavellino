@@ -4,12 +4,32 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from "../ItemCount/ItemCount";
-import { useGetProductById } from '../../hooks/useGetProductById';
 import Loading from '../Loading/Loading';
+import { Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { useGetProductById } from '../../hooks/useGetProductById';
+import { CartContext } from '../../context/CartContext';
+import "./ItemDetail.css";
 
 const ItemDetail = ({itemId}) => {
 
+    const { addItem } = useContext(CartContext);
+
+    let [ quantity, setQuantity ] = useState(0)
+
     const { product, isLoading } = useGetProductById(parseInt(itemId));
+
+    const handleOnAdd = (quantity) => {
+        setQuantity(quantity)
+
+        const item = {
+            id : product.id,
+            nombre : product.nombre,
+            precio : product.precio        
+        }
+
+        addItem(item, quantity)
+    }
 
     if (isLoading) {
         return (
@@ -35,7 +55,10 @@ const ItemDetail = ({itemId}) => {
                 <Typography gutterBottom variant="h5" component="div">$ {product.precio}</Typography>
             </CardContent>
             <CardActions>
-                <ItemCount stock={product.stock} initial={1} onAdd={(items) => console.log("Agregaste " + items + " productos")}/>
+                { quantity > 0 ? 
+                <Link className="finalizarCompra" to="/cart">Finalizar Compra</Link> : 
+                <ItemCount stock={product.stock} initial={1} onAdd={handleOnAdd}/>
+                }
             </CardActions>
             <p>Stock Disponible: {product.stock}</p>
             </Card>

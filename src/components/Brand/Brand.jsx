@@ -1,5 +1,5 @@
-import "./Brand.css";
 import { Link } from "react-router-dom";
+import "./Brand.css";
 
 const Brand = () => {
     return (

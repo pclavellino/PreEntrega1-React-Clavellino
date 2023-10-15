@@ -2,7 +2,6 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 
-
 const ItemListContainer = () => {
 
     const { categoryId } = useParams()

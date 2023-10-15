@@ -1,0 +1,15 @@
+.finalizarCompra     {
+        background-color: #FF8100;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        font-weight: bold;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        }
+        
+.finalizarCompra:hover    {
+        box-shadow: 5px 5px 25px #FF8100;
+        }
+

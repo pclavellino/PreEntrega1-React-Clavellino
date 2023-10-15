@@ -1,7 +1,7 @@
 import Item from "../Items/Item";
+import Loading from "../Loading/Loading";
 import { useGetProducts } from "../../hooks/useGetProducts";
 import "./ItemList.css";
-import Loading from "../Loading/Loading";
 
 const ItemList = ({productCategory}) => {
 
