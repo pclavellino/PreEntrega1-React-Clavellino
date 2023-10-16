@@ -5,7 +5,7 @@ import "./ItemList.css";
 
 const ItemList = ({productCategory}) => {
 
-    const {products, isLoading} = useGetProducts(productCategory);
+    const {products, isLoading} = useGetProducts(productCategory)
 
     if (isLoading) {
         return (

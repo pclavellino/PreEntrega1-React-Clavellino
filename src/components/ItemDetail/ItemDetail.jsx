@@ -17,7 +17,7 @@ const ItemDetail = ({itemId}) => {
 
     let [ quantity, setQuantity ] = useState(0)
 
-    const { product, isLoading } = useGetProductById(parseInt(itemId));
+    const { product, isLoading } = useGetProductById(itemId);
 
     const handleOnAdd = (quantity) => {
         setQuantity(quantity)

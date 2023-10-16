@@ -1,14 +1,17 @@
+import { getDoc, doc, getFirestore } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { getProductById } from "../asyncMock";
 
 export const useGetProductById = (productId) => {
     const [product, setProduct] = useState([])
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        getProductById(productId)
-        .then(response => {
-            setProduct(response)
+
+        const db = getFirestore();
+
+        const element = doc(db, "productos", productId);
+        getDoc(element).then((item) => {
+            setProduct({ id : parseInt(item.id), ...item.data()})
         })
         .finally(() => {
             setIsLoading(false)
