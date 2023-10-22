@@ -11,15 +11,15 @@ export const useGetProducts = (productCategory) => {
         const db = getFirestore();
 
         if (productCategory) {
-            const productQuery = query(collection(db, "productos"), where ("categoria", "==", productCategory));
+            const productQuery = query(collection(db, "products"), where ("category", "==", productCategory));
         getDocs(productQuery).then((item) => {
-            setProducts(item.docs.map((doc) => ({ id: parseInt(doc.id), ...doc.data()})))
+            setProducts(item.docs.map((doc) => ({ id: doc.id, ...doc.data()})))
         })
         .finally(() => setIsLoading(false))
         } else {
-            const productCollection = collection(db, "productos");
+            const productCollection = collection(db, "products");
         getDocs(productCollection).then((item) => {
-            setProducts(item.docs.map((doc) => ({ id: parseInt(doc.id), ...doc.data()})))
+            setProducts(item.docs.map((doc) => ({ id: doc.id, ...doc.data()})))
         })
         .finally(() => setIsLoading(false))
         }  

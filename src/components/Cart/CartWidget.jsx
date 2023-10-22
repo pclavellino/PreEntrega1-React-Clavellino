@@ -2,7 +2,9 @@ import CartIcon from "./CartIcon"
 import CartItems from "./CartItems"
 import { CartContext } from "../../context/CartContext";
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Cart.css";
+
 
 const CartWidget = () => {
 
@@ -15,14 +17,13 @@ const CartWidget = () => {
         setQuantity(cantidadTotal)
     }, [cart])
 
-    if (cart.length > 0) {
-        return (
-            <div className="cartContainer">
-                <CartIcon/>
-                <CartItems count={quantity} />
-            </div>     
-            )
-    }
+    return (
+        <Link className="cartContainer" to="/cart">
+            <CartIcon/>
+            <CartItems count={quantity} />
+        </Link>     
+        )
+    
 }
 
 export default CartWidget;

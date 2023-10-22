@@ -6,12 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBEHXeSndQ-YK6i8ViKgx7Ej2A1CwQ_7VQ",
-  authDomain: "proyecto-ecommerce-react-97835.firebaseapp.com",
-  projectId: "proyecto-ecommerce-react-97835",
-  storageBucket: "proyecto-ecommerce-react-97835.appspot.com",
-  messagingSenderId: "984690906846",
-  appId: "1:984690906846:web:dc71a37fe1d3ffa4aed44f"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messaggingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 const app = initializeApp(firebaseConfig);

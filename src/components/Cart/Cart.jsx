@@ -1,18 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
 
-    const { cart, removeItem, clearCart } = useContext(CartContext);
-
-    const [total, setTotal] = useState(0);
-
-    useEffect(() => {
-        const precioTotal = cart.reduce((acumulador, producto) => acumulador + (producto.precio * producto.quantity), 0)
-        setTotal(precioTotal)
-    }, [cart])
+    const { cart, total, removeItem, clearCart } = useContext(CartContext);
 
     if (cart.length === 0) {
         return (
@@ -34,19 +27,19 @@ const Cart = () => {
                     <div className="columnTitle">Eliminar</div>
                 </div>
             {cart.map((product => (
-                <div className="cartResume">
-                    <div className="column">{product.nombre}</div>
+                <div className="cartResume cartProductResume">
+                    <div className="column">{product.name}</div>
                     <div className="column">{product.quantity}</div>
-                    <div className="column">$ {product.precio}</div>
-                    <div className="column">$ {product.precio * product.quantity}</div>
+                    <div className="column">$ {product.price}</div>
+                    <div className="column">$ {product.price * product.quantity}</div>
                     <div className="column">
-                        <button className="cartButton buttonRemoveItem" onClick={() => {removeItem(product.id)}}>X</button>
+                        <button className="cartButton" onClick={() => {removeItem(product.id)}}>X</button>
                     </div>
                 </div>
             )))}
             <div className="cartTotal">Total: $ {total}</div>
-            <button className="cartButton buttonClearCart" onClick={clearCart}>Limpiar Carrito</button>
-            <button className=" cartButton buttonPay">Pagar</button>
+            <button className="cartButton" onClick={clearCart}>Limpiar Carrito</button>
+            <Link className=" cartButton" to="/checkout">Checkout</Link>
         </div>
     )
 }

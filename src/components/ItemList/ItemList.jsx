@@ -22,7 +22,7 @@ const ItemList = ({productCategory}) => {
     return (
         <div className="ItemList">
             {products.map((product => (
-                <Item key={product.id} id={product.id} nombre={product.nombre} imagen={product.imagen} precio={product.precio} descripcion={product.descripcion} />
+                <Item key={product.id} id={product.id} nombre={product.name} imagen={product.image} precio={product.price}/>
             )))}
         </div>
     )

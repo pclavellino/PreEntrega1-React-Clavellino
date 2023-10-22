@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const CartContext = createContext({
     cart: []
@@ -8,15 +8,17 @@ export const CartContext = createContext({
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
-    console.log(cart)
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        const precioTotal = cart.reduce((acumulador, producto) => acumulador + (producto.price * producto.quantity), 0)
+        setTotal(precioTotal)
+    }, [cart])
 
     const addItem = (item, quantity) => {
         if (!isInCart(item.id)) {
             setCart(prev => [...prev, {...item, quantity}])
-        } else {
-            console.log("El articulo ya se encuentra en el carrito")
-        }
-        
+        }        
     }
 
     const removeItem = (id) => {
@@ -33,7 +35,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{addItem, removeItem, clearCart, cart}}>
+        <CartContext.Provider value={{addItem, removeItem, clearCart, isInCart, cart, total}}>
             {children}
         </CartContext.Provider>
     )
