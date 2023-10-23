@@ -31,6 +31,8 @@ Este proyecto fue creado con Create-React-App
 2. Inicia la aplicación: `npm start`
 3. Abre tu navegador web y accede a `http://localhost:3000`
 
+Nota: Encontraras un archivo GIF de muestra de la navegacion de la aplicacion en el directorio raiz de la aplicacion.
+
 ## Autor
 
 Creado por Pablo Clavellino - 2023

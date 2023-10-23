@@ -1,4 +1,4 @@
-import CheckoutForm from "../CheckOut/CheckoutForm";
+import CheckoutForm from "./CheckoutForm";
 import Loading from "../Loading/Loading";
 import { CartContext } from "../../context/CartContext";
 import { useState, useContext } from "react";
@@ -9,7 +9,6 @@ import "./Checkout.css";
 const Checkout = () => {
 
     const { cart, total, clearCart } = useContext(CartContext)
-
     const [orderId, setOrderId] = useState("")
     const [isLoading, setIsLoading] = useState(false);
 
@@ -35,7 +34,6 @@ const Checkout = () => {
         .then(() => setIsLoading(false))
 
         clearCart()
-
     }
 
     if (isLoading) {
@@ -59,10 +57,6 @@ const Checkout = () => {
         <CheckoutForm createOrder={createOrder}/>
     )
         
-    }
-
-
-
-
+}
 
 export default Checkout;

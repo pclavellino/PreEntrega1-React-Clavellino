@@ -22,8 +22,7 @@ const CartWidget = () => {
             <CartIcon/>
             <CartItems count={quantity} />
         </Link>     
-        )
-    
+        ) 
 }
 
 export default CartWidget;
